@@ -24,7 +24,7 @@
 		<tomcat-jdbc.version>8.0.23</tomcat-jdbc.version>
 		<hessian.version>4.0.37</hessian.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
-		<template.version>2.0-SNAPSHOT</template.version>
+		<template.version>0.0.1-SNAPSHOT</template.version>
 		<template.log4j2.version>${template.version}</template.log4j2.version>
 		<template.redis.version>1.2-SNAPSHOT</template.redis.version>
 		<template.rpc.version>${template.version}</template.rpc.version>
@@ -38,6 +38,22 @@
 
 
 	<dependencyManagement>
-
+		<dependencies>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.asd.template</groupId>
+				<artifactId>template-common</artifactId>
+				<version>${template.version}</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 </project>
