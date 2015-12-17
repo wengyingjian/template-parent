@@ -22,15 +22,15 @@
 		<mybatis.version>3.2.8</mybatis.version>
 		<mybatis-spring.version>1.2.3</mybatis-spring.version>
 		<tomcat-jdbc.version>8.0.23</tomcat-jdbc.version>
-		<hessian.version>4.0.37</hessian.version>
+		<hessian.version>4.0.38</hessian.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
-		<template.version>2.0-SNAPSHOT</template.version>
+		<template.version>0.0.1-SNAPSHOT</template.version>
 		<template.log4j2.version>${template.version}</template.log4j2.version>
 		<template.redis.version>1.2-SNAPSHOT</template.redis.version>
-		<template.rpc.version>${template.version}</template.rpc.version>
+		<template.hessian.version>${template.version}</template.hessian.version>
 		<template.utils.version>1.0-SNAPSHOT</template.utils.version>
 		<template.datasource.version>${template.version}</template.datasource.version>
-		<template.rpc.client.version>${template.rpc.version}</template.rpc.client.version>
+		<template.rpc.client.version>${template.version}</template.rpc.client.version>
 		<template.rpc.monitor.statsd.version>${template.rpc.version}</template.rpc.monitor.statsd.version>
 		<rpc.utils.server.version>1.0.1-SNAPSHOT</rpc.utils.server.version>
 		<curator.version>2.9.0</curator.version>
@@ -38,6 +38,42 @@
 
 
 	<dependencyManagement>
-
+		<dependencies>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>${hessian.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.asd.template</groupId>
+				<artifactId>template-common</artifactId>
+				<version>${template.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.asd.template</groupId>
+				<artifactId>template-hessian-server</artifactId>
+				<version>${template.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.asd.template</groupId>
+				<artifactId>template-hessian-client</artifactId>
+				<version>${template.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.asd.template</groupId>
+				<artifactId>template-datasource</artifactId>
+				<version>${template.version}</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 </project>
